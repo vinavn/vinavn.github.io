@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>VINA-AI-Bach-21.24</title>
+    <meta property="og:title" content="VINA-AI-Bach-21.24" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8" />
+    <meta property="twitter:card" content="summary_large_image" />
+
+    <style data-tag="reset-style-sheet">
+      html {  line-height: 1.15;}body {  margin: 0;}* {  box-sizing: border-box;  border-width: 0;  border-style: solid;}p,li,ul,pre,div,h1,h2,h3,h4,h5,h6,figure,blockquote,figcaption {  margin: 0;  padding: 0;}button {  background-color: transparent;}button,input,optgroup,select,textarea {  font-family: inherit;  font-size: 100%;  line-height: 1.15;  margin: 0;}button,select {  text-transform: none;}button,[type="button"],[type="reset"],[type="submit"] {  -webkit-appearance: button;}button::-moz-focus-inner,[type="button"]::-moz-focus-inner,[type="reset"]::-moz-focus-inner,[type="submit"]::-moz-focus-inner {  border-style: none;  padding: 0;}button:-moz-focus,[type="button"]:-moz-focus,[type="reset"]:-moz-focus,[type="submit"]:-moz-focus {  outline: 1px dotted ButtonText;}a {  color: inherit;  text-decoration: inherit;}input {  padding: 2px 4px;}img {  display: block;}html { scroll-behavior: smooth  }
+    </style>
+    <style data-tag="default-style-sheet">
+      html {
+        font-family: Inter;
+        font-size: 16px;
+      }
+
+      body {
+        font-weight: 400;
+        font-style:normal;
+        text-decoration: none;
+        text-transform: none;
+        letter-spacing: normal;
+        line-height: 1.15;
+        color: var(--dl-color-gray-black);
+        background-color: var(--dl-color-gray-white);
+
+      }
+    </style>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Pattaya:wght@400&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+      data-tag="font"
+    />
+    <style>
+       body::-webkit-scrollbar {
+         width: 0.5em;
+         z-index: 100;
+         background-color:transparent;
+       }
+
+
+      body::-webkit-scrollbar-thumb {
+         background-color:white;
+         box-shadow:0 -100vh 0 100vh #5128f5;//magic
+       }
+    </style>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div>
+      <script
+        type="text/javascript"
+        src="https://unpkg.com/dangerous-html@0.1.11/dist/default/lib.umd.js"
+      ></script>
+      <link href="./home.css" rel="stylesheet" />
+
+      <div class="home-container">
+        <section class="home-hero">
+          <div class="home-menu">
+            <div id="mobile-menu" class="home-mobile-navigation">
+              <img
+                alt="pastedImage"
+                src="public/playground_assets/pastedimage-no9b-1500h.png"
+                class="home-logo"
+              />
+              <div class="home-links">
+                <span class="Link">Solutions</span>
+                <span class="Link">How it works</span>
+                <span class="Link">Prices</span>
+              </div>
+              <div id="close-mobile-menu" class="home-close-mobile-menu">
+                <svg viewBox="0 0 804.5714285714286 1024" class="home-icon">
+                  <path
+                    d="M741.714 755.429c0 14.286-5.714 28.571-16 38.857l-77.714 77.714c-10.286 10.286-24.571 16-38.857 16s-28.571-5.714-38.857-16l-168-168-168 168c-10.286 10.286-24.571 16-38.857 16s-28.571-5.714-38.857-16l-77.714-77.714c-10.286-10.286-16-24.571-16-38.857s5.714-28.571 16-38.857l168-168-168-168c-10.286-10.286-16-24.571-16-38.857s5.714-28.571 16-38.857l77.714-77.714c10.286-10.286 24.571-16 38.857-16s28.571 5.714 38.857 16l168 168 168-168c10.286-10.286 24.571-16 38.857-16s28.571 5.714 38.857 16l77.714 77.714c10.286 10.286 16 24.571 16 38.857s-5.714 28.571-16 38.857l-168 168 168 168c10.286 10.286 16 24.571 16 38.857z"
+                  ></path>
+                </svg>
+              </div>
+            </div>
+            <div class="home-desktop-navigation">
+              <nav class="home-centered">
+                <div class="home-left">
+                  <div class="home-links1">
+                    <a href="#gioithieu" class="home-link Link">Giới thiệu</a>
+                    <a href="#sudung" class="home-link01 Link">
+                      Hướng dẫn và cách sử dụng
+                    </a>
+                  </div>
+                </div>
+                <div class="home-right">
+                  <div class="home-get-started">
+                    <a href="#tinhnang" class="home-link02">Get started</a>
+                  </div>
+                  <a href="#close-mobile-menu" class="home-link03">
+                    <div id="open-mobile-menu" class="home-burger-menu"></div>
+                  </a>
+                </div>
+              </nav>
+            </div>
+            <div>
+              <dangerous-html
+                html="<script>
+/*
+Mobile menu - Code Embed
+*/
+
+// Mobile menu
+const mobileMenu = document.querySelector('#mobile-menu')
+
+// Buttons
+const closeButton = document.querySelector('#close-mobile-menu')
+const openButton = document.querySelector('#open-mobile-menu')
+
+// On openButton click, set the mobileMenu position left to -100vw
+openButton.addEventListener('click', function() {
+    mobileMenu.style.transform = 'translateX(0%)'
+})
+
+// On closeButton click, set the mobileMenu position to 0vw
+closeButton.addEventListener('click', function() {
+    mobileMenu.style.transform = 'translateX(100%)'
+})
+</script>"
+              ></dangerous-html>
+            </div>
+          </div>
+          <header class="home-header">
+            <h1 id="nuttai" class="home-text003">
+              <span class="home-text004">VINA trợ lý ảo Offline</span>
+              <br class="home-text005" />
+              <span class="home-text006">&nbsp;</span>
+              <br class="home-text007" />
+              <span class="home-text008"></span>
+              <span class="home-text009">
+                giải pháp làm bạn với học sinh con một
+              </span>
+              <br class="home-text010" />
+              <span class="home-text011">
+                giúp đỡ học tập, thư giãn, ngăn chặn căng thẳng
+              </span>
+            </h1>
+            <p class="home-text012">
+              <span class="home-text013">
+                Phạm Quang Bách - PTNK DHQG HCM (2021-2024)
+              </span>
+              <br class="home-text014" />
+              <span class="home-text015">
+                Mọi trải nghiệm tốt hoặc trục trặc hay góp ý, xin bạn hãy để lại
+                bình luận dưới
+              </span>
+              <a
+                href="https://youtu.be/G91Hx1OLo0w"
+                target="_blank"
+                rel="noreferrer noopener"
+                class="home-link04"
+              >
+                video này
+              </a>
+              <br class="home-text016" />
+            </p>
+            <a
+              href="https://drive.google.com/u/0/uc?id=1XwgV1vwFtV1EQD_74j3OQlXOmrI9tWa7&amp;export=download"
+              target="_blank"
+              rel="noreferrer noopener"
+              class="home-link05"
+            >
+              <div class="home-get-started1">
+                <span class="home-text017">
+                  <span>Tải xuống ngay! (hỗ trợ Windows 10 và Windows 11)</span>
+                  <br />
+                  <span class="home-text020">
+                    (khi tải xong, khoan hãy cài vội, hãy xem hướng dẫn dưới)
+                  </span>
+                  <br />
+                </span>
+              </div>
+            </a>
+            <a
+              href="https://drive.google.com/u/0/uc?id=1thSAXI_D5rZBALqamLe3pkIkZIt1U3pW&amp;export=download"
+              target="_blank"
+              rel="noreferrer noopener"
+              class="home-link06"
+            >
+              <div id="phuthuoc" class="home-get-started2">
+                <span class="home-text022">
+                  <span>Tải xuống phần phụ thuộc của VINA (registry)</span>
+                  <br />
+                </span>
+              </div>
+            </a>
+          </header>
+          <img
+            alt="image"
+            src="public/playground_assets/picture2-600h.png"
+            class="home-image"
+          />
+        </section>
+        <section class="home-features">
+          <div class="home-title">
+            <span id="tinhnang" class="home-text025">
+              Những tính năng ưu việt của VINA
+            </span>
+          </div>
+          <div class="home-cards">
+            <div class="home-container1">
+              <div class="card">
+                <img
+                  alt="pastedImage"
+                  src="public/playground_assets/pastedimage-fii6m-200h.png"
+                  class="home-icon2"
+                />
+                <span class="home-text026">Hoạt động Offline</span>
+                <span class="home-text027">
+                  Đồng hành với bạn trong bất cứ nơi đâu với nhiều tính năng thú
+                  vị.
+                </span>
+              </div>
+              <div class="home-publish card">
+                <img
+                  alt="pastedImage"
+                  src="public/playground_assets/pastedimage-mimg-200h.png"
+                  class="home-icon3"
+                />
+                <span class="home-text028">Hoạt động Online</span>
+                <span class="home-text029">
+                  VINA có hỗ trợ bạn tìm kiếm google nhanh chóng khi wifi khả
+                  dụng
+                </span>
+              </div>
+            </div>
+            <div class="home-container2">
+              <div class="card home-analyze">
+                <img
+                  alt="pastedImage"
+                  src="public/playground_assets/pastedimage-l6p-200h.png"
+                  class="home-icon4"
+                />
+                <span class="home-text030">Nhận diện căng thẳng</span>
+                <span class="home-text031">
+                  Sẵn sàng cảnh báo căng thẳng cho bạn để ngăn chặn kịp thời
+                  căng thẳng, tránh dẫn đến những chứng bệnh trầm cảm và căng
+                  thẳng mãn tính
+                </span>
+              </div>
+              <div class="card">
+                <img
+                  alt="pastedImage"
+                  src="public/playground_assets/pastedimage-vyi5-200h.png"
+                  class="home-icon5"
+                />
+                <span class="home-text032">Quản lý công việc</span>
+                <span class="home-text033">
+                  Tích hợp chức năng ghi chú thông minh, có thể nói lịch trình
+                  của bạn bằng giọng nói tự nhiên, giúp bạn dễ dàng theo dõi và
+                  nắm bắt kế hoạch
+                </span>
+              </div>
+            </div>
+            <span id="sudung" class="home-text034">
+              <span class="home-text035">Hướng dẫn cài đặt và sử dụng:</span>
+              <br />
+              <span class="home-text037">
+                (Bạn có thể xem video tóm tắt bằng cách nhấn nút dưới đây, hoặc
+                xem hướng dẫn phía dưới)
+              </span>
+              <br />
+            </span>
+          </div>
+          <a
+            href="https://youtu.be/G91Hx1OLo0w"
+            target="_blank"
+            rel="noreferrer noopener"
+            class="home-link07"
+          >
+            <img
+              alt="image"
+              src="public/playground_assets/youtube-400w.gif"
+              class="home-image1"
+            />
+          </a>
+        </section>
+        <span class="home-text039">
+          <span class="home-text040">1)</span>
+          <span class="home-text041">
+            Sau khi bạn tải VINA, bạn hãy tải phần phụ thuộc của VINA
+          </span>
+          <a href="#phuthuoc" class="home-link08">
+            (nút tải xuống ở phía trên)
+          </a>
+          <br class="home-text042" />
+          <br class="home-text043" />
+          <br class="home-text044" />
+          <span class="home-text045">2)</span>
+          <span class="home-text046">Bạn hãy dựa vào</span>
+          <a
+            href="https://www.thegioididong.com/hoi-dap/huong-dan-cai-dat-tieng-viet-tren-windows-10-889040"
+            target="_blank"
+            rel="noreferrer noopener"
+            class="home-link09"
+          >
+            bài viết này (đối với Win10)
+          </a>
+          <span class="home-text047">&nbsp;hoặc&nbsp;</span>
+          <a
+            href="https://www.thegioididong.com/tin-tuc/cach-cai-tieng-viet-cho-windows-11-1395692"
+            target="_blank"
+            rel="noreferrer noopener"
+            class="home-link10"
+          >
+            bài viết này
+          </a>
+          <a
+            href="https://www.thegioididong.com/tin-tuc/cach-cai-tieng-viet-cho-windows-11-1395692"
+            target="_blank"
+            rel="noreferrer noopener"
+            class="home-link11"
+          >
+            &nbsp;(đối với Win11)
+          </a>
+          <span class="home-text048">
+            và làm đến bước 5 của Win10 hoặc bước 4 của Win11 (tick hết các ô
+            chứ không chừa ô nào như hướng dẫn)&nbsp; để cài tiếng Việt cho trợ
+            lý ảo. Bạn làm tương tự đối với tiếng Anh nếu máy bạn chưa cài tiếng
+            Anh. (Quá trình này mất 1ph, rất nhanh chóng)
+          </span>
+          <br class="home-text049" />
+          <br class="home-text050" />
+          <br class="home-text051" />
+          <span class="home-text052">3)</span>
+          <span class="home-text053">
+            Bạn hãy nhấn đúp chuột vào file phần phụ thuộc bạn mới tải về, sau
+            đó nhấn Run anyway và sau đó nhấn Yes.
+          </span>
+          <br class="home-text054" />
+          <br class="home-text055" />
+          <br class="home-text056" />
+          <br class="home-text057" />
+          <br class="home-text058" />
+          <br />
+        </span>
+        <img
+          alt="image"
+          src="public/playground_assets/6-300h.png"
+          class="home-image2"
+        />
+        <span class="home-text060">
+          <span class="home-text061">4)</span>
+          <span>
+            Hãy chạy chương trình VINA v1.0 bạn vừa tải về và tiến hành cài đặt
+            (để mọi thứ mặc định và cài đặt). Quá trình cài đặt mất 2 phút.
+          </span>
+          <span class="home-text063">Khuyến khích</span>
+          <span>
+            nên tắt các phần mềm diệt Virus. Do phần mềm VINA còn mới trên thị
+            trường, một số phần mềm diệt Virus chưa cập nhật kịp và nhận diện
+            nhầm VINA có chứa file nguy hiểm.
+          </span>
+          <br />
+          <br />
+          <br />
+        </span>
+        <span class="home-text068">
+          <span class="home-text069">5)</span>
+          <span>
+            Bạn chạy chương trình VINA bằng cách nhấn đúp chuột vào biểu tượng
+            VINA ở Desktop, hoặc bạn cũng có thể vào Search của Windows để tìm
+            chương trình và chạy
+          </span>
+          <br />
+          <br />
+          <br />
+        </span>
+        <span class="home-text074">
+          <span class="home-text075">6)</span>
+          <span>Để gọi trợ lý ảo VINA,</span>
+          <span class="home-text077">
+            bạn hãy nói câu "Vi na, Vi na, Vi na" ở tốc độ vừa phải, rõ ràng câu
+            chữ
+          </span>
+          <span>
+            . Sau khi trợ lý ảo trả lời bạn, bạn có thể đưa ra những yêu cầu sau
+            cho trợ lý:
+          </span>
+          <br />
+          <span>- Hỏi mấy giờ / hỏi ngày, tháng, năm</span>
+          <br />
+          <span>- Hỏi bạn khỏe không / ai tạo ra bạn / VINA là ai</span>
+          <br />
+          <span>- Kể chuyện cười / chuyện đùa</span>
+          <br />
+          <span>- Mở nhạc / phát một bài hát / thư giãn</span>
+          <br />
+          <span>- Mở trò chơi</span>
+          <br />
+          <span>- Tạo ghi chú / mở ghi chú / viết thêm ghi chú</span>
+          <br />
+          <span>- Hỏi lịch trình / ghi chú có gì / công việc là gì</span>
+          <br />
+          <span>- Mở nhận dạng căng thẳng</span>
+          <br />
+          <span>- VINA có thể làm gì / chức năng / khả năng</span>
+          <br />
+          <span>-</span>
+          <span class="home-text099">Tắt máy</span>
+          <span>
+            (nghĩa là chỉ tắt trợ lý ảo VINA, không phải là shutdown máy tính)
+          </span>
+          <br />
+          <span>
+            Những tính năng trên thuộc những tính năng có thể hoạt động cả
+            Offline lẫn online
+          </span>
+          <br />
+          <br />
+          <span>
+            Những tính năng dưới đây thuộc những tính năng chỉ khả dụng khi có
+            internet:
+          </span>
+          <br />
+          <span>- Tra google / mở trình duyệt</span>
+          <br />
+          <span>- Nhiệt độ hiện tại</span>
+          <br />
+          <br />
+          <span>
+            Lưu ý: khi bạn gọi "Vi na, Vi na, Vi na", trợ lý ảo báo hiệu âm
+            thanh đôi và trả lời bạn chứng tỏ trợ lý ảo đã được kích hoạt và chờ
+            lệnh, khi này bạn gọi "Vi na" lần nữa trợ lý ảo sẽ không hiểu và báo
+            âm thanh đơn.&nbsp;Sau khi có âm thanh đôi, nếu lệnh không hợp lệ
+            hoặc VINA không nghe rõ lắm hoặc bạn không nói gì cả, VINA sẽ báo âm
+            thanh đơn.&nbsp;Sau khi âm thanh đơn được báo thì VINA ở trạng thái
+            ngủ. Bạn có thể gọi "Vi na, Vi na, Vi na" để kích hoạt trợ lý và nói
+            yêu cầu của bạn.
+          </span>
+          <br />
+          <br />
+          <br />
+          <br />
+        </span>
+        <section class="home-quote-container">
+          <div class="home-quote">
+            <span class="home-message">
+              “VINA sẽ đem đến cho bạn trải nghiệm chưa từng có về một trợ lý ảo
+              Tiếng Việt, với những chức năng ưu việt (nhận diện căng thẳng,
+              quản lý công việc, phát nhạc, ...) tích hợp trong trợ lý. Và hơn
+              hết, VINA hoạt động offline một cách mạnh mẽ!”
+            </span>
+            <div class="home-author">
+              <span class="home-quote1">
+                <span class="home-text117">—&nbsp; Phạm Quang Bách</span>
+                <span>, Founder and CEO</span>
+              </span>
+            </div>
+          </div>
+        </section>
+        <section class="home-banners">
+          <div class="home-banner-manage">
+            <div class="home-container3">
+              <div class="home-left1">
+                <span id="gioithieu" class="home-text119 title">
+                  Giới thiệu
+                </span>
+                <span class="home-text120">
+                  <span class="home-text121">
+                    Hiện nay, trên thế giới có rất nhiều trợ lý ảo như Siri,
+                    Google assistant, … với những ưu điểm nổi trội kinh ngạc,
+                    nhưng phần lớn chúng đều có một nhược điểm chung là không
+                    thể sử dụng khi ta không có một kết nối mạng. Chính vì vậy,
+                    những năm gần đây, đã có nhiều sinh viên trên thế giới cố
+                    gắng lập trình trợ lý ảo offline, điển hình như Nickolay V.
+                    Shmyrev đã tạo nên một thư viện Vosk nhận diện giọng nói
+                    Tiếng Anh ngoại tuyến khi ông còn là sinh viên với độ chuẩn
+                    xác rất cao (WER=5.69). Ông cũng đã tạo một model cho Tiếng
+                    Việt nhưng tiếc rằng độ chuẩn xác khá thấp. Ngoài ra, khi
+                    bạn tìm kiếm trên YouTube với từ khóa “lập trình trợ lý ảo
+                    Tiếng Việt”, hầu như không có video nào hướng dẫn lập trình
+                    cơ chế nhận dạng giọng nói offline (tính đến ngày
+                    26/11/2022). Ta có thể kết luận rằng gần như chưa có một
+                    phiên bản Tiếng Việt nào cho trợ lý ảo ngoại tuyến có mã
+                    nguồn mở mà mọi người có thể tiếp cận đến ở hiện tại.
+                  </span>
+                  <br class="home-text122" />
+                  <br class="home-text123" />
+                  <span class="home-text124">
+                    Tương tự, việc nhận dạng căng thẳng thông qua phần mềm trên
+                    thế giới vẫn đang trong thời kì phát triển và có nhiều thành
+                    tựu, có thể kể đến như tính năng mức độ căng thẳng trên đồng
+                    hồ Garmin và nhiều dự án website phát hiện căng thẳng bởi
+                    sinh viên trong và ngoài nước, song vẫn chưa có sự tối ưu
+                    cho cơ chế nhận dạng căng thẳng, cũng như việc phải truy cập
+                    vào một Website để giám sát mình trong lúc làm việc dấy lên
+                    một vấn đề lo đáng ngại về quyền riêng tư
+                  </span>
+                  <br class="home-text125" />
+                  <br class="home-text126" />
+                  <span class="home-text127">
+                    Với sự khao khát và đam mê tạo nên một trợ lý ảo Tiếng Việt
+                    hoàn thiện, trợ lý ảo VINA đã được ra đời với nhiều tính
+                    năng hữu ích cho mọi người. VINA có thể hoạt động cả khi bạn
+                    trực tuyến hoặc ngoại tuyến, giúp bạn sắp xếp lịch trình,
+                    phát hiện và ngăn chặn kịp thời căng thẳng trong lúc bạn làm
+                    việc (giúp bạn tránh các chứng bệnh như căng thẳng mãn tính
+                    hay trầm cảm), bật nhạc và kể chuyện đùa giúp bạn thư giãn
+                    sau giờ làm việc mệt mỏi, và nhiều hơn thế nữa. VINA có thể
+                    làm tất cả việc ấy chỉ qua khẩu lệnh “Vi na” và sau đó bạn
+                    nêu yêu cầu của bạn. Và hơn hết, VINA có thể hoạt động cả
+                    ngoại tuyến và trực tuyến, giúp người dùng không phải lo
+                    lắng về vấn đề quyền riêng tư như những phần mềm hoặc trang
+                    web online, cùng với sự nhanh gọn và linh hoạt của chính
+                    mình đã giúp cho VINA nổi bật so với các trợ lý ảo Tiếng
+                    Việt khác.
+                  </span>
+                  <br class="home-text128" />
+                  <br class="home-text129" />
+                </span>
+                <div class="home-get-started3 template-button">
+                  <a href="#nuttai" class="home-link12">Tải VINA</a>
+                </div>
+              </div>
+              <div class="home-image-container">
+                <img
+                  alt="pastedImage"
+                  src="public/playground_assets/picture2-600h.png"
+                  class="home-cards-image"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="home-banner-advanced-analytics">
+            <div class="home-centered-container">
+              <div class="home-image-container1">
+                <img
+                  alt="pastedImage"
+                  src="public/playground_assets/picture2-600h.png"
+                  class="home-cards-image1"
+                />
+              </div>
+              <div class="home-right1">
+                <h2 id="sumenh" class="home-text130 title">
+                  <span class="home-text131">Sứ mệnh</span>
+                  <br />
+                </h2>
+                <div class="home-category">
+                  <span class="home-text133">
+                    <span class="home-text134">
+                      Khi không có internet/dữ liệu di động, bạn có buồn chán
+                      không? Làm thế nào để có người bạn luôn ở bên ta khi cần,
+                      giúp chúng ta vui vẻ, thư giãn, xua đi căng thẳng?
+                    </span>
+                    <br class="home-text135" />
+                    <br class="home-text136" />
+                    <span class="home-text137">
+                      Trợ lý ảo VINA được ra đời nhằm giải quyết được nhiều vấn
+                      đề trong gia đình và xã hội ngày nay khi các bạn trẻ chúng
+                      ta rất thiếu các mối quan hệ tương tác đàm thoại giữa các
+                      thành viên gia đình do gia đình có ít con và bố mẹ mải lo
+                      công việc, dẫn tới các bạn trẻ dễ phụ thuộc vào internet
+                      để lấp đầy khoảng trống tình cảm. Có trợ lý này, các bạn
+                      trẻ sẽ phấn khích khi dùng giọng nói trao đổi với Vina như
+                      một người bạn với công nghệ DEEP LEARNING và thị giác máy
+                      tính, giúp quản lý công việc hiệu quả và thư giãn sau ngày
+                      dài mệt nhọc. Thật tuyệt vời khi chúng ta có thể trò
+                      chuyện với trợ lý cả khi offline như bước ra từ phim viễn
+                      tưởng
+                    </span>
+                    <br class="home-text138" />
+                    <br class="home-text139" />
+                    <span class="home-text140">
+                      Ưu điểm: Có thể sử dụng bất cứ nơi đâu, từ thành thị đến
+                      vùng sâu vùng xa. Ngoài ra, yêu cầu phần cứng cho VINA
+                      không cao. Đồng thời, dự án có tích hợp chế độ phát hiện
+                      căng thẳng chính xác theo thời gian thực, sẵn sàng cảnh
+                      báo bạn khi phát hiện bạn làm việc quá sức.
+                    </span>
+                    <br class="home-text141" />
+                    <br class="home-text142" />
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="home-banner">
+            <div class="home-container4">
+              <div class="home-left2">
+                <h2 class="home-text143 title">Lời cảm ơn</h2>
+                <span class="home-text144">
+                  <span>
+                    Em xin chân thành cảm ơn sâu sắc đến ban tổ chức cuộc thi
+                    PIISE 2022 đã tạo cơ hội cho em được tham gia cuộc thi này.
+                    Nhờ có sự hướng dẫn tận tình của các thầy cô và các anh chị
+                    trong ban tổ chức qua các buổi workshop, em đã hoàn thành
+                    bản báo cáo nghiên cứu khoa học của mình thành công.
+                  </span>
+                  <br />
+                  <br />
+                  <span>
+                    Dự án này thành công không chỉ nhờ sự cống hiến hết mình của
+                    em mà còn nhờ sự động viên và khích lệ từ cha mẹ em. Em muốn
+                    gửi lời cảm ơn đến cha mẹ, những người luôn lo lắng và quan
+                    tâm chăm sóc em mỗi khi em thức khuya để nghiên cứu. Em cũng
+                    gửi lời cảm ơn đến những sinh viên, tiến sĩ trong và ngoài
+                    nước đã gầy dựng một nền móng về xử lý ngôn ngữ tự nhiên và
+                    nhận dạng căng thẳng cơ bản để em có thể phát triển chúng
+                    lên một tầm mới.
+                  </span>
+                  <br />
+                  <br />
+                  <span>-Phạm Quang Bách</span>
+                  <br />
+                  <span></span>
+                  <br class="home-text154" />
+                  <br />
+                </span>
+                <div class="home-get-started4 template-button">
+                  <a href="#nuttai" class="home-link13">Tải VINA</a>
+                </div>
+              </div>
+              <div class="home-image-container2">
+                <img
+                  alt="pastedImage"
+                  src="public/playground_assets/win_20220619_16_19_16_pro%20-%20copy%20%5B2%5D-1200w.jpg"
+                  class="home-cards-image2"
+                />
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="home-integrations">
+          <div class="home-centered-container1">
+            <div class="home-heading">
+              <span class="title">Báo cáo khoa học về dự án VINA</span>
+            </div>
+            <div class="home-pills-container">
+              <div class="home-pills">
+                <div class="home-container5">
+                  <div class="home-container6"></div>
+                </div>
+              </div>
+              <a
+                href="https://docs.google.com/document/d/1IlFZfYF8JvJhxmUIGBt5opQ0BU-hfTqZuuD0dmHxwJo/edit?usp=sharing"
+                target="_blank"
+                rel="noreferrer noopener"
+                class="home-link14"
+              >
+                <div class="you-tube-you-tube you-tube-root-class-name">
+                  <img
+                    alt="pastedImage"
+                    src="public/playground_assets/picture2-600h.png"
+                    class="you-tube-pasted-image"
+                  />
+                </div>
+              </a>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+  </body>
+</html>
